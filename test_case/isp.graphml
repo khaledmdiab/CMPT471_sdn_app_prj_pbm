@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="bw" attr.type="int" for="edge" id="d5" />
+  <key attr.name="delay" attr.type="int" for="edge" id="d4" />
+  <key attr.name="tcp_port" attr.type="int" for="node" id="d3" />
+  <key attr.name="tcp_server" attr.type="boolean" for="node" id="d2" />
+  <key attr.name="udp_port" attr.type="int" for="node" id="d1" />
+  <key attr.name="udp_server" attr.type="boolean" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="1" />
+    <node id="3">
+      <data key="d0">True</data>
+      <data key="d1">80</data>
+    </node>
+    <node id="5">
+      <data key="d2">True</data>
+      <data key="d3">5050</data>
+    </node>
+    <node id="6">
+      <data key="d0">True</data>
+      <data key="d1">5050</data>
+    </node>
+    <node id="2" />
+    <node id="4" />
+    <edge source="1" target="2">
+      <data key="d4">10</data>
+      <data key="d5">100</data>
+    </edge>
+    <edge source="1" target="4">
+      <data key="d4">5</data>
+      <data key="d5">50</data>
+    </edge>
+    <edge source="3" target="2">
+      <data key="d4">10</data>
+      <data key="d5">100</data>
+    </edge>
+    <edge source="3" target="5">
+      <data key="d4">5</data>
+      <data key="d5">10</data>
+    </edge>
+    <edge source="3" target="6">
+      <data key="d4">10</data>
+      <data key="d5">100</data>
+    </edge>
+    <edge source="5" target="2">
+      <data key="d4">3</data>
+      <data key="d5">50</data>
+    </edge>
+    <edge source="5" target="4">
+      <data key="d4">1</data>
+      <data key="d5">10</data>
+    </edge>
+    <edge source="5" target="6">
+      <data key="d4">3</data>
+      <data key="d5">100</data>
+    </edge>
+    <edge source="2" target="4">
+      <data key="d4">3</data>
+      <data key="d5">50</data>
+    </edge>
+  </graph>
+</graphml>

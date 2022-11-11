@@ -1,0 +1,6 @@
+__pycache__
+*.json
+*.graphml
+*.log
+!test_case/*.json
+!test_case/*.graphml

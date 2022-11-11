@@ -1,0 +1,45 @@
+Pass By Paths Rules:
+Switch: 2
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=6, src_ip=10.0.0.2, dst_ip=10.0.0.5, src_port=*, dst_port=*, in_port=1
+	Action: ActionType.FORWARD, OutPort=4
+Switch: 4
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=6, src_ip=10.0.0.2, dst_ip=10.0.0.5, src_port=*, dst_port=*, in_port=3
+	Action: ActionType.FORWARD, OutPort=4
+Switch: 5
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=6, src_ip=10.0.0.2, dst_ip=10.0.0.5, src_port=*, dst_port=*, in_port=4
+	Action: ActionType.FORWARD, OutPort=1
+Switch: 5
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=6, src_ip=10.0.0.5, dst_ip=10.0.0.2, src_port=*, dst_port=*, in_port=1
+	Action: ActionType.FORWARD, OutPort=4
+Switch: 4
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=6, src_ip=10.0.0.5, dst_ip=10.0.0.2, src_port=*, dst_port=*, in_port=4
+	Action: ActionType.FORWARD, OutPort=3
+Switch: 2
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=6, src_ip=10.0.0.5, dst_ip=10.0.0.2, src_port=*, dst_port=*, in_port=4
+	Action: ActionType.FORWARD, OutPort=1
+
+Min-latency Paths Rules:
+Switch: 1
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=1
+	Action: ActionType.FORWARD, OutPort=3
+Switch: 4
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=2
+	Action: ActionType.FORWARD, OutPort=4
+Switch: 5
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=4
+	Action: ActionType.FORWARD, OutPort=5
+Switch: 6
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=3
+	Action: ActionType.FORWARD, OutPort=1
+Switch: 6
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=1
+	Action: ActionType.FORWARD, OutPort=3
+Switch: 5
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=5
+	Action: ActionType.FORWARD, OutPort=4
+Switch: 4
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=4
+	Action: ActionType.FORWARD, OutPort=2
+Switch: 1
+	Pattern: src_mac=*, dst_mac=*, mac_proto=2048, ip_proto=17, src_ip=*, dst_ip=*, src_port=*, dst_port=*, in_port=3
+	Action: ActionType.FORWARD, OutPort=1

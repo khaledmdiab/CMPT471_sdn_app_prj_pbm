@@ -1,0 +1,20 @@
+[
+    {
+        "switch_id": 1,
+        "match_pattern": {
+            "src_mac": null,
+            "dst_mac": null,
+            "mac_proto": 2048,
+            "ip_proto": 17,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": 80,
+            "in_port": null
+        },
+        "action": {
+            "action_type": "DROP",
+            "out_port": null
+        }
+    }
+]
